@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- namespace必须指向dao接口 -->
+<mapper namespace="com.cheer.mini.bms.dao.BookDao">
+	<sql id="hotbook">bookid,bookname,pictureUrl,summary</sql>
+	
+	<select id="getHotBooks"  resultType="Book">
+		select <include refid="hotbook" /> from book where hot = 1
+	</select>
+
+	
+</mapper> 
