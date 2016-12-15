@@ -32,11 +32,11 @@
 					</div>
 					<c:forEach items="${discountBooks}" var="discountBook">
 					<div class="new_prod_box">
-						<a href="${path}bms/book/findById?bookid=${discountBook.bookid}">${discountBook.bookname }</a>
+						<a href="details.htm">${discountBook.bookname }</a>
 						<div class="new_prod_bg">
 							<span class="new_icon"><img src="${path}image/promo_icon.gif"
-								alt="" title="" /></span> <a href="${path}bms/book/findById?bookid=${discountBook.bookid}"><img
-								src="${path}${discountBook.pictureUrl}" alt="" title="" class="thumb" border="0" /></a>
+								alt="" title="" /></span> <a href="${path}book/findById?bookid=${discountBook.bookid}"><img
+								src="${path}${discountBook.pictrueUrl}" alt="" title="" class="thumb" border="0" /></a>
 						</div>
 					</div>
 					</c:forEach>
@@ -48,7 +48,7 @@
 					</div>
 					<ul class="list">
 						<c:forEach items="${catalogs}" var="catalog">
-							<li><a href="#">${catalog.catalogname}</a></li>
+							<li><a href="${catalog.catalogId }">${catalog.catalogName}</a></li>
 						</c:forEach>
 					</ul>
 					

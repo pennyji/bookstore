@@ -8,11 +8,7 @@
 
 *.[oa]
 
-<<<<<<< HEAD
-.settings
-=======
 /.settings/
->>>>>>> Evian
 
 */.settings/
 
@@ -29,12 +25,8 @@ META-INF/
 *target/
 
 */.idea/
-<<<<<<< HEAD
-*.class
-=======
 
+*.iml
 
-
->>>>>>> Evian
 *jdbc.properties
 /bin

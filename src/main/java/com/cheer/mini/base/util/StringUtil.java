@@ -1,6 +1,5 @@
 package com.cheer.mini.base.util;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
 public class StringUtil {
@@ -31,7 +30,7 @@ public class StringUtil {
     }
 
     /**
-     * 创建32位UUID字符�?
+     * 创建32位UUID字符�?
      * 
      * @param length
      * @return
@@ -54,22 +53,13 @@ public class StringUtil {
     }
 
     /**
-     * 判断字符是否为非空字�?
+     * 判断字符是否为非空字�?
      * 
      * @param str
      * @return
      */
     static public boolean notEmpty(String str) {
         return !isEmpty(str);
-    }
-    
-    public static String encodeStr(String str) {  
-        try {  
-            return new String(str.getBytes("ISO-8859-1"), "UTF-8");  
-        } catch (UnsupportedEncodingException e) {  
-            e.printStackTrace();  
-            return null;  
-        }  
     }
 
 }
