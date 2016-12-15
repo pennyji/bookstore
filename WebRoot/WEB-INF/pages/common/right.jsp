@@ -35,8 +35,8 @@
 						<a href="details.htm">${discountBook.bookname }</a>
 						<div class="new_prod_bg">
 							<span class="new_icon"><img src="${path}image/promo_icon.gif"
-								alt="" title="" /></span> <a href="${path}book/findById?bookid=${discountBook.bookid}"><img
-								src="${path}${discountBook.pictrueUrl}" alt="" title="" class="thumb" border="0" /></a>
+								alt="" title="" /></span> <a href="${path}bms/book/findById?bookid=${discountBook.bookid}"><img
+								src="${path}${discountBook.pictureUrl}" alt="" title="" class="thumb" border="0" /></a>
 						</div>
 					</div>
 					</c:forEach>

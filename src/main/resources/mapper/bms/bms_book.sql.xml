@@ -8,6 +8,19 @@
 	<select id="getHotBooks"  resultType="Book">
 		select <include refid="hotbook" /> from book where hot = 1
 	</select>
-
+	<select id="findLatestBook" resultType="Book">
+		SELECT <include refid="hotbook" /> from book ORDER BY createDate DESC limit 3
+	</select>
+	<select id="findDiscountBook" resultType="Book">
+		SELECT * from book WHERE discount != ''
+	</select>
+	
+	<select id="findById" parameterType="String" resultType="Book">
+		SELECT * from book WHERE bookid= #{bookid} 
+	</select>
+	
+	<select id="findByAuthor" parameterType="String" resultType="Book">
+		SELECT <include refid="hotbook" /> from book  where author = #{author}
+	</select>
 	
 </mapper> 

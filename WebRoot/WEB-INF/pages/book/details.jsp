@@ -14,7 +14,7 @@
 		<div class="center_content">
 			<div class="left_content">
 				<div class="crumb_nav">
-					<a href="${_path}/index/showIndex.action">首页</a> &gt;&gt; <a href="${_path}/book/findAllBooks.action">所有书籍</a>&gt;&gt;详情
+					<a href="${path}ums/user/showIndex">首页</a> &gt;&gt; <a href="${_path}/book/findAllBooks.action">所有书籍</a>&gt;&gt;详情
 				</div>
 				<div class="title">
 					<span class="title_icon"><img
@@ -22,7 +22,7 @@
 				<div class="feat_prod_box_details">
 					<div class="prod_img">
 						<a href="details.htm"><img
-							src="${path}${book.pictrueUrl}" alt="" title="" border="0" /></a>
+							src="${path}${book.pictureUrl}" alt="" title="" border="0" /></a>
 						<br /> <br /> <a href="${path}image/big_pic.jpg"
 							rel="lightbox"><img src="${path}image/zoom.gif" alt=""
 							title="" border="0" /></a>
@@ -33,7 +33,7 @@
 							<div class="prod_title">简介：</div>
 							<p class="details">${book.summary}</p>
 							<div class="author">
-								<span> <a href="#">${book.author}</a>著</span>
+								<span> <a href="${path}bms/book/findByAuthor?author=${book.author}">${book.author}</a>著</span>
 							</div>
 							<div class="price">
 								<strong>价格:</strong> <span class="red">${book.price}</span>

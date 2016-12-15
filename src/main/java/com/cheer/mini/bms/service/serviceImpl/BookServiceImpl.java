@@ -20,5 +20,27 @@ public class BookServiceImpl implements BookService {
 		
 		return bookDao.getHotBooks();
 	}
+	@Override
+	public Book findById(String bookid) {
+		
+		return bookDao.findById(bookid);
+	}
+	@Override
+	public List<Book> findLatestBook() {
+		
+		return bookDao.findLatestBook();
+	}
+	@Override
+	public List<Book> findDiscountBook() {
+		
+		return bookDao.findDiscountBook();
+	}
+	@Override
+	public List<Book> findByAuthor(String author) {
+		
+		return bookDao.findByAuthor(author);
+	}
+	
+	
 
 }
