@@ -11,22 +11,7 @@
 	<select id="getHotBooks"  resultType="Book">
 		select <include refid="hotbook" /> from book where hot = 1
 	</select>
-<<<<<<< HEAD
-	<select id="findLatestBook" resultType="Book">
-		SELECT <include refid="hotbook" /> from book ORDER BY createDate DESC limit 3
-	</select>
-	<select id="findDiscountBook" resultType="Book">
-		SELECT * from book WHERE discount != ''
-	</select>
-	
-	<select id="findById" parameterType="String" resultType="Book">
-		SELECT * from book WHERE bookid= #{bookid} 
-	</select>
-	
-	<select id="findByAuthor" parameterType="String" resultType="Book">
-		SELECT <include refid="hotbook" /> from book  where author = #{author}
-	</select>
-=======
+
 	<!-- 查找新书，更加数据库creatDate字段降序，只去前两项 -->
 	<select id="getNewBooks" resultType="Book">
 	    select <include refid="newbook"></include>from book ORDER BY createDate DESC LIMIT 2
@@ -46,6 +31,6 @@
     <select id="findByAuthor" parameterType="String" resultType="Book">
         select <include refid="author"></include> from book where author = #{author}
     </select>
->>>>>>> Evian
+
 	
 </mapper> 
