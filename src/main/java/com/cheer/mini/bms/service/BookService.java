@@ -9,12 +9,16 @@ public interface BookService {
 	
 	public List<Book> getHotBooks();
 	
-	public Book findById(String bookid);
+
+	public List<Book> getNewBooks();
 	
-	public List<Book> findLatestBook();
+	public List<Book> getDiscount();
 	
-	public List<Book> findDiscountBook();
+	public Book findById(String bookId);
 	
 	public List<Book> findByAuthor(String author);
+	
+	
+
 
 }

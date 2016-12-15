@@ -8,11 +8,12 @@ public interface BookDao {
 	
 	public List<Book> getHotBooks();
 	
+
+	public List<Book> getNewBooks();
+	
+	public List<Book> getDiscount();
+	
 	public Book findById(String bookid);
-	
-	public List<Book> findLatestBook();
-	
-	public List<Book> findDiscountBook();
 	
 	public List<Book> findByAuthor(String author);
 
