@@ -8,6 +8,7 @@ public interface BookDao {
 	
 	public List<Book> getHotBooks();
 	
+
 	public List<Book> getNewBooks();
 	
 	public List<Book> getDiscount();

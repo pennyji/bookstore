@@ -2,15 +2,16 @@ package com.cheer.mini.bms.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.annotations.Param;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.cheer.mini.base.util.StringUtil;
@@ -46,15 +47,7 @@ public class BookController {
 		
 	} 
 	
-	@RequestMapping("findById")
-	public ModelAndView findById(@Param("bookid")String bookid){
-		Book book = bookServiceImpl.findById(bookid);
-		ModelAndView mv = new ModelAndView("/book/details");
-		mv.addObject("book", book);
-		
-		return mv;
-		
-	}
+
 	
 	/*@RequestMapping("findByAuthor")
 	public ModelAndView findByAuthor(@Param("author")String author) throws UnsupportedEncodingException{
@@ -74,6 +67,21 @@ public class BookController {
 		mv.addObject("books", books);
 		return mv;
 		
+	}
+	@RequestMapping("/findById")
+	public ModelAndView findById(@RequestParam("bookid") String bookid){
+		Book book = bookServiceImpl.findById(bookid);
+		ModelAndView mv = new ModelAndView("book/details");
+		mv.addObject("book", book);
+		return mv;
+	}
+	
+	@RequestMapping("/findByAuthor")
+	public ModelAndView findByAuthor(@RequestParam("author") String author){
+		List<Book> books = bookServiceImpl.findByAuthor(author);
+		ModelAndView mv = new ModelAndView("book/category");
+		mv.addObject("books", books);
+		return mv;
 	}
 
 }

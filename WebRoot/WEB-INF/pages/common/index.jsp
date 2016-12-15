@@ -22,7 +22,9 @@
 				<c:forEach items="${hotBooks}" var="hotbook">
 					<div class="feat_prod_box">
 					<div class="prod_img">
+
 						<a href="${path}bms/book/findById?bookid=${hotbook.bookid}"><img src="${path}${hotbook.pictureUrl}" alt=""
+
 							title="" border="0" /></a>
 					</div>
 					<div class="prod_det_box">

@@ -9,6 +9,7 @@ public interface BookService {
 	
 	public List<Book> getHotBooks();
 	
+
 	public List<Book> getNewBooks();
 	
 	public List<Book> getDiscount();
@@ -18,5 +19,6 @@ public interface BookService {
 	public List<Book> findByAuthor(String author);
 	
 	
+
 
 }

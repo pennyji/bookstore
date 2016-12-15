@@ -11,7 +11,9 @@
   <jsp:include page="../common/menu.jsp" />
   <div class="center_content">
     <div class="left_content">
+
       <div class="crumb_nav"> <a href="${_path}/bms/book/showIndex">首页</a> &gt;&gt; 所有书籍 </div>
+
       <div class="title"><span class="title_icon"><img src="${path}image/bullet1.gif" alt="" title="" /></span>Category books</div>
       <div class="new_products">
       	<c:forEach items="${books}" var="book">

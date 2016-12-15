@@ -21,6 +21,7 @@ public class BookServiceImpl implements BookService {
 		return bookDao.getHotBooks();
 	}
 	@Override
+
 	public List<Book> getNewBooks() {
 		// TODO Auto-generated method stub
 		return bookDao.getNewBooks();
@@ -40,5 +41,6 @@ public class BookServiceImpl implements BookService {
 		// TODO Auto-generated method stub
 		return bookDao.findByAuthor(author);
 	}
+
 
 }
