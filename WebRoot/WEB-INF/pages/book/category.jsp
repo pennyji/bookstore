@@ -11,12 +11,12 @@
   <jsp:include page="../common/menu.jsp" />
   <div class="center_content">
     <div class="left_content">
-      <div class="crumb_nav"> <a href="${_path}/index/showIndex.action">首页</a> &gt;&gt; 所有书籍 </div>
+      <div class="crumb_nav"> <a href="${_path}/bms/book/showIndex.action">首页</a> &gt;&gt; 所有书籍 </div>
       <div class="title"><span class="title_icon"><img src="${path}image/bullet1.gif" alt="" title="" /></span>Category books</div>
       <div class="new_products">
       	<c:forEach items="${books}" var="book">
-      		<div class="new_prod_box"> <a href="${_path}/book/findById?bookid=${book.bookid}">${book.bookname}</a>
-	          <div class="new_prod_bg"> <a href="${_path}/book/findById?bookid=${book.bookid}"><img src="${path}${book.pictrueUrl}" alt="" title="" class="thumb" border="0" /></a> </div>
+      		<div class="new_prod_box"> <a href="${_path}/bms/book/findById?bookid=${book.bookid}">${book.bookname}</a>
+	          <div class="new_prod_bg"> <a href="${_path}/bms/book/findById?bookid=${book.bookid}"><img src="${path}${book.pictureUrl}" alt="" title="" class="thumb" border="0" /></a> </div>
 	        </div>
       	</c:forEach>
         
